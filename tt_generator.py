@@ -41,7 +41,6 @@ class TimetableGenerator:
     def generate(self, timetable, lesson_blocks):
         if not lesson_blocks:
             self.store_timetable(timetable)
-	    print(self.total_combinations)
         else:
             next_lesson_block = lesson_blocks[0]
             for shift in next_lesson_block.shifts:
