@@ -22,15 +22,14 @@ class HTMLCourseParser:
         current_shift = Shift('None')
         for tr in rows:
             tds = tr.find_all('td')
-            
+        
             shift_name = str(tds[0].contents[0].strip())
             shift_time = str(tds[2].contents[0].encode("cp1252").strip())
 
             day        = parse_day(shift_time[0:3])
             start      = parse_time(shift_time[5:10])
             end        = parse_time(shift_time[13:18])
-            room       = str(tds[3].a.contents[0].encode("cp1252").strip()) \
-                           if tds[3].find_all('a') else ""
+            room       = str(tds[3].a.get_text().encode("cp1252").strip()) if tds[3].find_all('a') else ""
 
             
             if shift_name != current_shift.name:   # new shift
