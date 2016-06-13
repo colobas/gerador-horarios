@@ -14,6 +14,7 @@
 	font-weight:bold;
 	background-color: #E1E1E1;
 	text-align: left;
+	margin: 0px;
 }
 
 .timetable th{
@@ -34,9 +35,11 @@
 	border-width: 1.5px;
 	border-style: solid;
 	border-bottom-style:none;
+	margin: 0px;
 }
 
 .period-middle-slot{
+	margin: 0px;
 	border-width: 1.5px;
 	border-right-style: solid;
 	border-left-style: solid;
@@ -44,6 +47,7 @@
 }
 
 .period-last-slot{
+	margin: 0px;
 	border-width: 1.5px;
 	border-style: solid;
 	border-top-style:none;
