@@ -29,13 +29,34 @@ class HTMLPrettyPrinter:
 			day_slots = [slot for slot in timetable.lessons if slot.day == weekday]
 			day_slots.sort(key=lambda x: x.start.minutes, reverse=False)
 			l=[] #lista de grupos de aulas por dia. cada grupo contém as aulas que se sobrepoe. as aulas que nao se sobrepoe ficam sozinhas num grupo
+
+			super_slots = []
 			while len(day_slots) != 0:
+				slot = day_slots.pop(0)
+				if len(super_slots != 0):
+					for super_slot in super_slots:
+						if super_slot[-1].end.minutes == slot.start.minutes:
+							super_slot.append(slot)
+							break
+				else:
+					ss = []
+					ss.append(slot)
+					super_slots.append(ss)
+
+
+			super_slots.sort(key=lambda x: x[0].start.minutes, reverse=False)
+			while len(super_slots) != 0:
 				grupo = []
-				grupo.append(day_slots.pop(0))
-				for slot2 in day_slots:
-					if slot2.overlaps_with_group(grupo): #se se sobrepoe
-						grupo.append(slot2)
-						day_slots.remove(slot2)
+				grupo.append(super_slots.pop(0))
+
+				for ss in super_slots:
+					ss.sort(key=lambda x: x.start.minutes, reverse=False)
+
+					fake_slot = LessonSlot(weekday, ss[0].start, ss[-1].end, None)
+
+					if fake_slot.overlaps_with_group(grupo): #se se sobrepoe
+						grupo.append(ss)
+						super_slots.remove(ss)
 
 				l.append(grupo)
 
@@ -58,10 +79,10 @@ class HTMLPrettyPrinter:
 		day = grupo[0].day
 		if len(grupo) == 1: #se as aulas nao se sobrepuserem, faz como antigamente
 			slot = grupo[0]
-			self.format_simple_case(slot, content, slot.day, int(time_index(slot.start)), int(time_index(slot.end)))
+			self.format_simple_case(slot, content, slot[0].day)
 		else:
-			earliest_start = int(min([time_index(slot.start) for slot in grupo]))
-			latest_end = int(max([time_index(slot.end) for slot in grupo]))
+			earliest_start = int(min([time_index(slot[0].start) for slot in grupo]))
+			latest_end = int(max([time_index(slot[-1].end) for slot in grupo]))
 
 			height = latest_end-earliest_start + 1
 
@@ -71,9 +92,9 @@ class HTMLPrettyPrinter:
 			day_i = -1
 			for slot in grupo:
 				day_i = day_i+1
-				start_i = int(time_index(slot.start)-earliest_start)
-				end_i = int(time_index(slot.end)-earliest_start)
-				self.format_simple_case(slot, micro_table, day_i, start_i, end_i)
+				start_i = int(time_index(slot[0].start)-earliest_start)
+				end_i = int(time_index(slot[-1].end)-earliest_start)
+				self.format_simple_case(slot, micro_table, day_i)
 
 			for row in xrange(0, height):
 				s = [col[row] for col in micro_table]
@@ -86,23 +107,26 @@ class HTMLPrettyPrinter:
 				content[day][row+earliest_start] ="<td class='cont-td'><table class='inner-table'>" + "\n".join(s) + "</table></td>"
 
 
-	def format_simple_case(self, slot, content, day_i, start_i, end_i):
-		content[day_i][start_i] = "<td class='period-first-slot' "
-		content[day_i][end_i-1] = "<td class='period-last-slot' "
-		for time_i in xrange(start_i+1, end_i-1):
-			content[day_i][time_i] = "<td class='period-middle-slot' "
-		for time_i in xrange(start_i, end_i):
-			content[day_i][time_i] += "style='background-color: %s'  " \
-										% (self.color(slot.course_name()))
-			content[day_i][time_i] += "headers='weekday%i hour%i'  " \
-											   % (day_i, time_i)
-			content[day_i][time_i] += "title='%s-%s'> " \
-									% (slot.start, slot.end)
-			if time_i != start_i:
-				content[day_i][time_i] += "&nbsp;</td>\n"
+	def format_simple_case(self, ss, content, day_i)
+		for slot in ss:
+			start_i = int(time_index(slot.start))
+			end_i = int(time_index(slot.end)))
+			content[day_i][start_i] = "<td class='period-first-slot' "
+			content[day_i][end_i-1] = "<td class='period-last-slot' "
+			for time_i in xrange(start_i+1, end_i-1):
+				content[day_i][time_i] = "<td class='period-middle-slot' "
+			for time_i in xrange(start_i, end_i):
+				content[day_i][time_i] += "style='background-color: %s'  " \
+											% (self.color(slot.course_name()))
+				content[day_i][time_i] += "headers='weekday%i hour%i'  " \
+												   % (day_i, time_i)
+				content[day_i][time_i] += "title='%s-%s'> " \
+										% (slot.start, slot.end)
+				if time_i != start_i:
+					content[day_i][time_i] += "&nbsp;</td>\n"
 
-		content[day_i][start_i] += "%s&nbsp;&nbsp;(%s)&nbsp;%s</td>\n"  \
-								% (slot.course_name(), slot.lesson_category(), slot.room)
+			content[day_i][start_i] += "%s&nbsp;&nbsp;(%s)&nbsp;%s</td>\n"  \
+									% (slot.course_name(), slot.lesson_category(), slot.room)
 
 
 def make_inner_td(td, n, i, s):

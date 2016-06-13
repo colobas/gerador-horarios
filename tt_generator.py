@@ -153,10 +153,11 @@ class LessonSlot:
 
 
 	def overlaps_with_group(self, group):
-		for other in group:
-			if self != other:
-				if self.overlaps_with(other) == True:
-					return True
+		for ss in group:
+			for other in ss:
+				if self != other:
+					if self.overlaps_with(other) == True:
+						return True
 		return False
 
 	def overlaps_with(self, other):
