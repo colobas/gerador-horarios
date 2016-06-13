@@ -80,7 +80,7 @@ class HTMLPrettyPrinter:
 				for i in xrange(0, len(s)):
 					s[i] = make_inner_td(s[i], len(grupo))
 
-				content[day][row+earliest_start] ="<td class='cont-td'><table class='inner-table'><tr class='inner-row'>" + "\n".join(s) + "</tr></table></td>"
+				content[day][row+earliest_start] ="<td class='cont-td'><table class='inner-table'>" + "\n".join(s) + "</table></td>"
 
 
 	def format_simple_case(self, slot, content, day_i, start_i, end_i):
