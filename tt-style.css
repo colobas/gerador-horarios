@@ -3,8 +3,8 @@
 	color: #003333;
 	text-decoration: bold;
 	border-collapse:collapse;
-	border-color: #000;
-	border-width: 2px;
+	border-color: #000px;
+	border-width: 0px;
 	border-style: solid;
 }
 
@@ -76,7 +76,7 @@
 
 .timetable a{
 	font-weight: bold;
-	font-size: 9px;	
+	font-size: 9px;
 	border-style:none;
 }
 
@@ -85,25 +85,25 @@ float: left;
 }
 
 .cont-td{
-  margin: 0 ;
-  padding: 0 ; 
-  border: 0 ;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
   height: 20px; !important
 }
 
 
 .inner-table {
   border-collapse: collapse;
-  margin: 0;
-  border: 0;
-  padding: 0; 
-  width: 100%; 
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  width: 100%;
   height: 20px; !important
 }
 
 .inner-row {
   border-collapse: collapse; !important
-  margin: 0; !important
+  margin: 0px; !important
   width: 100%; !important
   height: 20px; !important
 }
@@ -112,6 +112,6 @@ float: left;
   overflow: hidden;
   display: table-cell;
   white-space: nowrap; !important
-  margin: 0 ; !important
+  margin: 0px; !important
   height: 20px; !important
 }
