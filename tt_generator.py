@@ -154,8 +154,9 @@ class LessonSlot:
 
 	def overlaps_with_group(self, group):
 		for other in group:
-			if self.overlaps_with(other) == True:
-				return True
+			if self != other:
+				if self.overlaps_with(other) == True:
+					return True
 
 		return False
 
