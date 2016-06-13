@@ -76,7 +76,7 @@ class HTMLPrettyPrinter:
 				self.format_simple_case(slot, micro_table, day_i, start_i, end_i)
 
 			for row in xrange(0, height):
-				#s = [col[row] for col in micro_table]
+				s = [col[row] for col in micro_table]
 				for i in xrange(0, len(s)):
 					s[i] = make_inner_td(s[i], len(grupo))
 
