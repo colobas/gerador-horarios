@@ -30,8 +30,8 @@ class HTMLPrettyPrinter:
 
 			l=[] #lista de grupos de aulas por dia. cada grupo contém as aulas que se sobrepoe. as aulas que nao se sobrepoe ficam sozinhas num grupo
 			while len(day_slots) != 0:
-				grupo = [day_slots[0]]
-				day_slots = day_slots[1:]
+				grupo = []
+				grupo.append(day_slots.pop(0))
 				for slot2 in day_slots:
 					if slot2.overlaps_with_group(grupo): #se se sobrepoe
 						grupo.append(slot2)
