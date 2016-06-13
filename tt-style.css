@@ -108,6 +108,11 @@ float: left;
 	border: none !important;
 }
 
+.inner-td{
+	border-right: none !important;
+    border-left: none !important;
+}
+
 td{
   overflow: hidden;
   white-space: nowrap !important;
