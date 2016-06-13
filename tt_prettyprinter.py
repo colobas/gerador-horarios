@@ -81,7 +81,7 @@ class HTMLPrettyPrinter:
 				for i in xrange(0, len(s)):
 					w = wid/(len(s)-i)
 					wid = wid - w
-					s[i] = make_inner_td(s[i], w)
+					s[i] = make_inner_td(s[i], w, i, len(s))
 
 				content[day][row+earliest_start] ="<td class='cont-td'><table class='inner-table'>" + "\n".join(s) + "</table></td>"
 
@@ -105,7 +105,7 @@ class HTMLPrettyPrinter:
 								% (slot.course_name(), slot.lesson_category(), slot.room)
 
 
-def make_inner_td(td, n):
+def make_inner_td(td, n, i, s):
 	if not "empty" in td:
 		t = td.split("style='")
 		u = t[0]
@@ -115,7 +115,14 @@ def make_inner_td(td, n):
 		u=td
 
 	a = u.split('-slot')
-	b = a[0] + "-slot inner-td" + a[1]
+	if i == 0:
+		b = a[0] + "-slot left-inner-td" + a[1]
+	else
+		if i == s-1:
+			b = a[0] + "-slot right-inner-td" + a[1]
+		else
+			b = a[0] + "-slot inner-td" + a[1]
+
 	return u
 
 def time_index(time):

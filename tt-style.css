@@ -108,9 +108,12 @@ float: left;
 	border: none !important;
 }
 
-.inner-td{
-	border-right: none !important;
+.left-inner-td{
     border-left: none !important;
+}
+
+.right-inner-td{
+    border-right: none !important;
 }
 
 td{
