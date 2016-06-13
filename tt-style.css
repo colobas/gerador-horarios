@@ -57,12 +57,14 @@
 }
 
 .period-single-slot {
+	margin: 0px;
 	border-width: 1.5px;
 	border-style: solid;
 	border-collapse: collapse; !important
 }
 
 .period-empty-slot{
+	margin: 0px;
 	border-width: 1px;
 	border-top-style: dashed;
 	border-left-style: solid;
