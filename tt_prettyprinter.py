@@ -68,7 +68,7 @@ class HTMLPrettyPrinter:
 			filler = "<td class='period-empty-slot' style='width: %i%% '>&nbsp;</td>\n" % (int(95/len(grupo)))
 			for x in xrange(0,height):
 				for y in xrange(0,len(grupo)):
-					micro_table[x][y] = filler
+					micro_table[y][x] = filler
 
 			day_i = -1
 			for slot in grupo:
