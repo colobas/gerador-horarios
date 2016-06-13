@@ -72,7 +72,7 @@ class HTMLPrettyPrinter:
 			for slot in grupo:
 				day_i = day_i+1
 				start_i = int(time_index(slot.start)-earliest_start)
-				end_i = int(time_index(slot.end)-earliest_start)+1
+				end_i = int(time_index(slot.end)-earliest_start)
 				self.format_simple_case(slot, micro_table, day_i, start_i, end_i)
 
 			for row in xrange(0, height):
