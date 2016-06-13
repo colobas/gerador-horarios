@@ -30,7 +30,6 @@ class HTMLPrettyPrinter:
 
 			l=[] #lista de grupos de aulas por dia. cada grupo contém as aulas que se sobrepoe. as aulas que nao se sobrepoe ficam sozinhas num grupo
 			while len(day_slots) != 0:
-				print("{1}".format(weekday))
 				grupo = []
 				grupo.append(day_slots.pop(0))
 				for slot2 in day_slots:

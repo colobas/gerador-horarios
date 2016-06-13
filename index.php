@@ -1,11 +1,11 @@
 <?php
 if (PHP_SAPI === 'cli') {
-    $curso = $argv[1];
+	$curso = $argv[1];
 }
 else {
 	if(isset($_GET['curso'])){
-	    $curso = $_GET['curso'];
-	    $id = $_GET['id'];
+		$curso = $_GET['curso'];
+		$id = $_GET['id'];
 	}
 }
 ?>
@@ -20,22 +20,22 @@ else {
 			<script type="text/javascript">
 				  var courseCount = 0;
 
-			      function showErrorMessage() { document.getElementById("errorMessage").style.visibility = "visible" }
-			      function hideErrorMessage() { document.getElementById("errorMessage").style.visibility = "hidden" }
+				  function showErrorMessage() { document.getElementById("errorMessage").style.visibility = "visible" }
+				  function hideErrorMessage() { document.getElementById("errorMessage").style.visibility = "hidden" }
 
 				  function processCourseURL() {
 
 
-				    var xmlhttp = new XMLHttpRequest();
-			        xmlhttp.onreadystatechange = function() {
+					var xmlhttp = new XMLHttpRequest();
+					xmlhttp.onreadystatechange = function() {
 					  if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-			            if (xmlhttp.responseText == '')
-			              showErrorMessage();
-			            else {
-			              hideErrorMessage();
-			              document.getElementById("courseURL").value = "";
-					      document.getElementById("courses").innerHTML += xmlhttp.responseText;
-			            }
+						if (xmlhttp.responseText == '')
+						  showErrorMessage();
+						else {
+						  hideErrorMessage();
+						  document.getElementById("courseURL").value = "";
+						  document.getElementById("courses").innerHTML += xmlhttp.responseText;
+						}
 					  }
 					}
 
@@ -46,16 +46,16 @@ else {
 					xmlhttp.send("course_id="+courseCount + "&url="+encodedURL);
 				  }
 
-			      function removeCourse(course) { course.innerHTML = "" }
+				  function removeCourse(course) { course.innerHTML = "" }
 			</script>
 			<style>
 				.form-control{
-				    text-overflow: ellipsis !important;
+					text-overflow: ellipsis !important;
 				}
 				.container{
-				    margin: auto;
-				    width: 60%;
-				    padding: 10px;
+					margin: auto;
+					width: 60%;
+					padding: 10px;
 				}
 
 				#loading {
@@ -1669,8 +1669,8 @@ else {
 							Selecciona o teu curso. Na próxima página vão aparecer as cadeiras disponíveis (demora um bocadinho a carregar...)<br>
 							Na página seguinte adiciona as tuas cadeiras uma a uma e clicka em Submit.<br><br>
 						<div class='dropdown'>
-						    <button class='btn btn-primary dropdown-toggle' type='button' data-toggle='dropdown'>Cursos<span class='caret'></span></button>
-						    <ul class='dropdown-menu'>
+							<button class='btn btn-primary dropdown-toggle' type='button' data-toggle='dropdown'>Cursos<span class='caret'></span></button>
+							<ul class='dropdown-menu'>
 				 				<li><a href='index.php?curso=meaer'>Engenharia Aeroespacial</a></li>
 				 				<li><a href='index.php?curso=meambi'>Engenharia do Ambiente</a></li>
 				 				<li><a href='index.php?curso=lean'>Engenharia e Arquitetura Naval</a></li>
@@ -1695,12 +1695,12 @@ else {
 						</div>
 
 					<?php } ?>
-    	<div id="footer">
-            Créditos: Pedro P. Ramos (<a href="http://web.ist.utl.pt/pedropramos/horarios/">Original version</a>)
-        </div>
-        <script language="javascript" type="text/javascript">
-				     $('#loading').hide();
-				     window.onbeforeunload = function () { $('#loading').show(); }
+		<div id="footer">
+			Créditos: Pedro P. Ramos (<a href="http://web.ist.utl.pt/pedropramos/horarios/">Original version</a>)
+		</div>
+		<script language="javascript" type="text/javascript">
+					 $('#loading').hide();
+					 window.onbeforeunload = function () { $('#loading').show(); }
 		</script>
    </body>
    </html>

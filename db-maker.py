@@ -29,7 +29,7 @@ def main(curso):
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 """
 
 	silly = 0
@@ -76,20 +76,20 @@ for curso in cursos:
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 	""".format(curso)
 
 	html += main(curso)
 	html += """\
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 """
 

@@ -5,13 +5,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/A266451113/2015-2016/2-semestre'>Aeroacústica</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/A36451113/2015-2016/2-semestre'>Aerodinâmica I</option>
@@ -103,15 +103,15 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 				<?php case 'meambi': ?>
 							<div id="loading">
@@ -120,13 +120,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/AMAA36451113/2015-2016/2-semestre'>Amostragem e Métodos de Análise Ambiental</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/ACED1625179/2016-2017/1-semestre'>Análise Complexa e Equações Diferenciais</option>
@@ -198,15 +198,15 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 				<?php case 'lean': ?>
 							<div id="loading">
@@ -215,13 +215,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/ACED1235179/2016-2017/1-semestre'>Análise Complexa e Equações Diferenciais</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/ANav25179/2016-2017/1-semestre'>Arquitectura Naval</option>
@@ -260,15 +260,15 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 				<?php case 'mebiol': ?>
 							<div id="loading">
@@ -277,13 +277,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/ACED1425179/2016-2017/1-semestre'>Análise Complexa e Equações Diferenciais</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/AQ25179/2016-2017/1-semestre'>Análise Química</option>
@@ -353,15 +353,15 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 				<?php case 'mebiom': ?>
 							<div id="loading">
@@ -370,13 +370,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/AMC236451113/2015-2016/2-semestre'>Algoritmos e Modelação Computacional</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/AH25179/2016-2017/1-semestre'>Anatomia e Histologia</option>
@@ -447,15 +447,15 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 				<?php case 'mec': ?>
 							<div id="loading">
@@ -464,13 +464,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/ACED1725179/2016-2017/1-semestre'>Análise Complexa e Equações Diferenciais</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/AEG25179/2016-2017/1-semestre'>Análise de Estruturas Geotécnicas</option>
@@ -568,15 +568,15 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 				<?php case 'lee': ?>
 							<div id="loading">
@@ -585,13 +585,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/AED101113/2015-2016/2-semestre'>Algoritmos e Estrutura de Dados</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/ACED21179/2016-2017/1-semestre'>Análise Complexa e Equações Diferenciais</option>
@@ -629,15 +629,15 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 				<?php case 'meec': ?>
 							<div id="loading">
@@ -646,13 +646,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/AVE6451113/2015-2016/2-semestre'>Accionamentos e Veículos Eléctricos</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/ADRC25179/2016-2017/1-semestre'>Algoritmia e Desempenho em Redes de Computadores</option>
@@ -760,15 +760,15 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 				<?php case 'meft': ?>
 							<div id="loading">
@@ -777,13 +777,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/ACED1325179/2016-2017/1-semestre'>Análise Complexa e Equações Diferenciais</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/Ast6451113/2015-2016/2-semestre'>Astrofísica</option>
@@ -881,15 +881,15 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 				<?php case 'legm': ?>
 							<div id="loading">
@@ -898,13 +898,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/ACED1725179/2016-2017/1-semestre'>Análise Complexa e Equações Diferenciais</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/CP25179/2016-2017/1-semestre'>Computação e Programação</option>
@@ -945,15 +945,15 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 				<?php case 'legi': ?>
 							<div id="loading">
@@ -962,13 +962,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/ACED21179/2016-2017/1-semestre'>Análise Complexa e Equações Diferenciais</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/APro51113/2015-2016/2-semestre'>Avaliação de Projectos</option>
@@ -1007,15 +1007,15 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 				<?php case 'leic-a': ?>
 							<div id="loading">
@@ -1024,13 +1024,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/ACED425179/2016-2017/1-semestre'>Análise Complexa e Equações Diferenciais</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/AMS1113/2015-2016/2-semestre'>Análise e Modelação de Sistemas</option>
@@ -1066,15 +1066,15 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 				<?php case 'leic-t': ?>
 							<div id="loading">
@@ -1083,13 +1083,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/ACED21179/2016-2017/1-semestre'>Análise Complexa e Equações Diferenciais</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/AMS1113/2015-2016/2-semestre'>Análise e Modelação de Sistemas</option>
@@ -1125,15 +1125,15 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 				<?php case 'lemat': ?>
 							<div id="loading">
@@ -1142,13 +1142,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/ACED1245179/2016-2017/1-semestre'>Análise Complexa e Equações Diferenciais</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/BBM25179/2016-2017/1-semestre'>Bioquímica e Biologia Molecular</option>
@@ -1189,15 +1189,15 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 				<?php case 'memec': ?>
 							<div id="loading">
@@ -1206,13 +1206,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/Aer25179/2016-2017/1-semestre'>Aerodinâmica</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/ACED1235179/2016-2017/1-semestre'>Análise Complexa e Equações Diferenciais</option>
@@ -1298,15 +1298,15 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 				<?php case 'meq': ?>
 							<div id="loading">
@@ -1315,13 +1315,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/ACED1425179/2016-2017/1-semestre'>Análise Complexa e Equações Diferenciais</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/AQ25179/2016-2017/1-semestre'>Análise Química</option>
@@ -1413,15 +1413,15 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 				<?php case 'lerc': ?>
 							<div id="loading">
@@ -1430,13 +1430,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/ACED21179/2016-2017/1-semestre'>Análise Complexa e Equações Diferenciais</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/ACom101113/2015-2016/2-semestre'>Arquitectura de Computadores</option>
@@ -1473,15 +1473,15 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 				<?php case 'lmac': ?>
 							<div id="loading">
@@ -1490,13 +1490,13 @@
 							<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
 							<div class='container'>
 								<form action="generate_timetables.php" method="post">
-							          <table style="width:70%;">
+									  <table style="width:70%;">
 				<tr>
 				<td>
 					<h3>Escolher&nbspuma&nbspcadeira</h3>
 				</td>
 				<td>
-		      		<select class="form-control" id="courseURL">
+			  		<select class="form-control" id="courseURL">
 
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/AMC236451113/2015-2016/2-semestre'>Algoritmos e Modelação Computacional</option>
 						<option value='http://fenix.tecnico.ulisboa.pt/disciplinas/AC225179/2016-2017/1-semestre'>Análise Complexa</option>
@@ -1551,14 +1551,14 @@
 					<button type="button" class="btn btn-primary" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
 				</td>
 			</tr>
-						           		<tr><td></td><td>
-						           		<div id="courses">
-						      			</div>
-						           		</td><td></td></tr>
-						           		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
-							      	  </table>
+								   		<tr><td></td><td>
+								   		<div id="courses">
+							  			</div>
+								   		</td><td></td></tr>
+								   		<tr><td></td><td><input class="btn btn-primary-outline" type="submit" value="Submit"></td><td></td></tr>
+								  	  </table>
 								</form>
-				      	 	</div>
-				      	 	</div>
+					  	 	</div>
+					  	 	</div>
 				<?php break ?>
 

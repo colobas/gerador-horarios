@@ -26,7 +26,7 @@ final_html = """\
 				<h3>Escolher&nbspuma&nbspcadeira</h3>
 			</td>
 			<td>
-	      		<select class="form-control" id="courseURL">
+		  		<select class="form-control" id="courseURL">
 """
 
 silly = 0

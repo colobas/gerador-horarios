@@ -17,14 +17,14 @@ html_result += "<span class='greytxt' style='font-size: 10px;'> (%s)</span>" % (
 html_result += "&nbsp&nbsp<img src='remove.png' onclick='removeCourse(coursediv" + str(course_id) + ")' />"
 html_result += "</h1>"
 html_result += "<input type='hidden' name='course%i' value='%s'>" \
-               % (course_id, url)
+			   % (course_id, url)
 
 block_id = 0
 sorted_blocks = sorted(course.lesson_blocks, key=lambda x: x.category, reverse=True)
 for block in sorted_blocks:
-    block_id += 1
-    html_result += "<input type='checkbox' name='course%itype%i' value='%s' checked>%s&nbsp;" \
-                   % (course_id, block_id, block.category, block.category)
+	block_id += 1
+	html_result += "<input type='checkbox' name='course%itype%i' value='%s' checked>%s&nbsp;" \
+				   % (course_id, block_id, block.category, block.category)
 
 html_result += "</div>"
 
