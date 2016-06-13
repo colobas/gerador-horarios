@@ -77,8 +77,11 @@ class HTMLPrettyPrinter:
 
 			for row in xrange(0, height):
 				s = [col[row] for col in micro_table]
+				wid = 95
 				for i in xrange(0, len(s)):
-					s[i] = make_inner_td(s[i], len(grupo))
+					w = wid/(len(s)-i)
+					wid = wid - w
+					s[i] = make_inner_td(s[i], w)
 
 				content[day][row+earliest_start] ="<td class='cont-td'><table class='inner-table'>" + "\n".join(s) + "</table></td>"
 
@@ -106,7 +109,7 @@ def make_inner_td(td, n):
 	if not "empty" in td:
 		t = td.split("style='")
 		u = t[0]
-		u += "style=' width: %i%% ;" % (int(95/n))
+		u += "style=' width: %i%% ;" % n)
 		u += t[1]
 	else:
 		u=td
