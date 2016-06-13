@@ -109,7 +109,7 @@ def make_inner_td(td, n):
 	if not "empty" in td:
 		t = td.split("style='")
 		u = t[0]
-		u += "style=' width: %i%% ;" % n)
+		u += "style=' width: %i%% ;" % (n)
 		u += t[1]
 	else:
 		u=td
