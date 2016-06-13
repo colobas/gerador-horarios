@@ -9,7 +9,7 @@ class TimetableGenerator:
         self.total_combinations += 1
         tt.heuristic = tt.total_time()
         tt.heuristic2 = tt.total_time2()
-        
+
         if len(self.generated) <= 99:
             self.generated.append(tt)
             self.generated2.append(tt)
@@ -25,10 +25,10 @@ class TimetableGenerator:
                 self.generated2.sort(key=lambda tt: tt.heuristic2)
 
 
-  
+
     def generate_timetables(self, lesson_blocks):
         self.generate(Timetable(), lesson_blocks)
-        
+
         for i in xrange(1, len(self.generated)+1):
             self.generated[len(self.generated) - i].score += i
 
@@ -83,7 +83,7 @@ class Timetable:
                 latest_end = max([slot.end.minutes for slot in daily_lessons])
                 interval = latest_end - earliest_start
         return result
-    
+
     def total_time(self):
         result = 0
         for weekday in range(Weekday.MONDAY, Weekday.SUNDAY):
@@ -97,10 +97,10 @@ class Timetable:
                             result = result + (slot.start.minutes - prev)
                         else:
                             result = result + 120
-                        
+
                         prev = slot.end.minutes
 
-        return result        
+        return result
 
 class Course(object):
 
@@ -153,8 +153,8 @@ class LessonSlot:
 
     def overlaps_with(self, other):
         return self.day == other.day and \
-               self.start.is_before(other.end) and \
-               self.end.is_after(other.start)
+               (self.start.is_before(other.end) or \
+               self.end.is_after(other.start))
 
 class Weekday:
     MONDAY = 0
