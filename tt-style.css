@@ -104,6 +104,10 @@ float: left;
   height: 20px !important;
 }
 
+.cont-td{
+	border: none !important;
+}
+
 td{
   overflow: hidden;
   white-space: nowrap !important;
