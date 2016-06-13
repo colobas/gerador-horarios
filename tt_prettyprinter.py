@@ -34,23 +34,31 @@ class HTMLPrettyPrinter:
 			while len(day_slots) != 0:
 				slot = day_slots.pop(0)
 				if len(super_slots != 0):
+					a = False
 					for super_slot in super_slots:
 						if super_slot[-1].end.minutes == slot.start.minutes:
 							super_slot.append(slot)
+							a = True
 							break
+					if not a:
+						ss = []
+						ss.append(slot)
+						super_slots.append(ss)
 				else:
 					ss = []
 					ss.append(slot)
 					super_slots.append(ss)
 
+			for ss in super_slots:
+				ss.sort(key=lambda x: x.start.minutes, reverse=False)
 
 			super_slots.sort(key=lambda x: x[0].start.minutes, reverse=False)
+
 			while len(super_slots) != 0:
 				grupo = []
 				grupo.append(super_slots.pop(0))
 
 				for ss in super_slots:
-					ss.sort(key=lambda x: x.start.minutes, reverse=False)
 
 					fake_slot = LessonSlot(weekday, ss[0].start, ss[-1].end, None)
 
