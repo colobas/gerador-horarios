@@ -35,6 +35,8 @@ class HTMLPrettyPrinter:
                     if slot1 != slot2 and slot1.overlaps_with(slot2): #se se sobrepoe()
                         grupo.append(slot2)
                         day_slots.remove(slot2)
+
+				slot1 = slot2
                 l.append(grupo)
 
                 for grupo in l:
@@ -65,7 +67,7 @@ class HTMLPrettyPrinter:
 
             filler = "<td class='period-empty-slot' style='width: %i%% '>&nbsp;</td>\n" % (int(95/len(grupo)))
             micro_table = [[filler for x in xrange(0,height)] for y in xrange(0,len(grupo))]
-            
+
             day_i = -1
             for slot in grupo:
                 day_i = day_i+1
@@ -143,7 +145,7 @@ def intro(total_selected, total_combinations):
     <script type='text/javascript'>
       var current = 1;
       var total = %i;
-      
+
       function showTable(i) {
         document.getElementById('tt'+i).style.display = 'block';
       }
@@ -211,4 +213,3 @@ def outro():
     </script>
   </body>
 </html>"""
-
