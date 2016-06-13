@@ -117,10 +117,10 @@ def make_inner_td(td, n, i, s):
 	a = u.split('-slot')
 	if i == 0:
 		b = a[0] + "-slot left-inner-td" + a[1]
-	else
+	else:
 		if i == s-1:
 			b = a[0] + "-slot right-inner-td" + a[1]
-		else
+		else:
 			b = a[0] + "-slot inner-td" + a[1]
 
 	return u
