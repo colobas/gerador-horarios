@@ -157,7 +157,6 @@ class LessonSlot:
 			if self != other:
 				if self.overlaps_with(other) == True:
 					return True
-
 		return False
 
     def overlaps_with(self, other):
