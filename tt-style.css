@@ -97,16 +97,6 @@ span.float-left {
 float: left;
 }
 
-/*
-.cont-td{
-  border-collapse: collapse;
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
-  height: 20px; !important
-}*/
-
-
 .inner-table {
   table-layout: fixed;
   border-collapse: collapse;
@@ -118,8 +108,8 @@ float: left;
 }
 
 td{
+  border-collapse: collapse;
   overflow: hidden;
-  display: table-cell;
   white-space: nowrap; !important
   margin: 0px; !important
   height: 20px; !important
