@@ -92,8 +92,8 @@ class HTMLPrettyPrinter:
 			day_i = -1
 			for slot in grupo:
 				day_i = day_i+1
-				start_i = int(time_index(slot[0].start)-earliest_start)
-				end_i = int(time_index(slot[-1].end)-earliest_start)
+				start_i = int(time_index(slot[0].start) - earliest_start)
+				end_i = int(time_index(slot[-1].end) - earliest_start)
 				self.format_simple_case(slot, micro_table, day_i)
 
 			for row in xrange(0, height):
@@ -107,10 +107,10 @@ class HTMLPrettyPrinter:
 				content[day][row+earliest_start] ="<td class='cont-td'><table class='inner-table'>" + "\n".join(s) + "</table></td>"
 
 
-	def format_simple_case(self, ss, content, day_i)
+	def format_simple_case(self, ss, content, day_i):
 		for slot in ss:
 			start_i = int(time_index(slot.start))
-			end_i = int(time_index(slot.end)))
+			end_i = int(time_index(slot.end))
 			content[day_i][start_i] = "<td class='period-first-slot' "
 			content[day_i][end_i-1] = "<td class='period-last-slot' "
 			for time_i in xrange(start_i+1, end_i-1):
