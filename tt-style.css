@@ -111,8 +111,12 @@ td{
   height: 20px !important;
   padding: 0px;
 }
+
 table{
     border-collapse:collapse;
+}
+tr{
+	border: none !important;
 }
 table, tr, td{
     padding:0 !important;
