@@ -36,6 +36,7 @@
 	border-style: solid;
 	border-bottom-style:none;
 	margin: 0px;
+	border-collapse: collapse; !important
 }
 
 .period-middle-slot{
@@ -44,6 +45,7 @@
 	border-right-style: solid;
 	border-left-style: solid;
 	text-align: center;
+	border-collapse: collapse; !important
 }
 
 .period-last-slot{
@@ -51,11 +53,13 @@
 	border-width: 1.5px;
 	border-style: solid;
 	border-top-style:none;
+	border-collapse: collapse; !important
 }
 
 .period-single-slot {
 	border-width: 1.5px;
 	border-style: solid;
+	border-collapse: collapse; !important
 }
 
 .period-empty-slot{
@@ -63,6 +67,7 @@
 	border-top-style: dashed;
 	border-left-style: solid;
 	border-right-style: solid;
+	border-collapse: collapse; !important
 }
 
 .period-hours {
