@@ -160,10 +160,7 @@ class LessonSlot:
 		return False
 
 	def overlaps_with(self, other):
-		return self.day == other.day and \
-		( (self.start.is_before(other.end) and self.end.is_after(other.start)) or\
-		  (other.start.is_before(self.end) and other.end.is_after(self.start))\
-		)
+		return self.day == other.day and (self.start.is_before(other.end) and self.end.is_after(other.start))
 
 class Weekday:
 	MONDAY = 0
