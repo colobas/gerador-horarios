@@ -151,6 +151,14 @@ class LessonSlot:
     def lesson_category(self):
         return self.parent_shift.parent_lesson_block.category
 
+
+	def overlaps_with_group(self, group):
+		for other in group:
+			if self.overlaps_with(other) == True:
+				return True
+
+		return False
+
     def overlaps_with(self, other):
         return self.day == other.day and \
                (self.start.is_before(other.end) or \

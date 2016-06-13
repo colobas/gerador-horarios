@@ -29,18 +29,16 @@ class HTMLPrettyPrinter:
 			day_slots = [slot for slot in timetable.lessons if slot.day == weekday]
 
 			l=[] #lista de grupos de aulas por dia. cada grupo contém as aulas que se sobrepoe. as aulas que nao se sobrepoe ficam sozinhas num grupo
-			for slot1 in day_slots:
-				grupo = [slot1]
-				for slot2 in day_slots:
-					if slot1 != slot2 and slot1.overlaps_with(slot2): #se se sobrepoe()
-						grupo.append(slot2)
-						day_slots.remove(slot2)
+			slot1 = day_slots[0]
+			grupo = [slot1]
+			for slot2 in day_slots[1:]:
+				if slot2.overlaps_with_group(grupo): #se se sobrepoe
+					grupo.append(slot2)
 
-					slot1 = slot2
-				l.append(grupo)
+			l.append(grupo)
 
-				for grupo in l:
-					self.format_group(grupo, content)
+			for grupo in l:
+				self.format_group(grupo, content)
 
 		# format the HTML for the timetable
 		html_result = [table_intro(table_id)]
