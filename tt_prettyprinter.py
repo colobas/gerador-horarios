@@ -111,9 +111,9 @@ def make_inner_td(td, n):
 	else:
 		u=td
 
-	a = u.split('-slot')
-	b = a[0] + "-slot inner-td" + a[1]
-	return b
+#	a = u.split('-slot')
+#	b = a[0] + "-slot inner-td" + a[1]
+	return u
 
 def time_index(time):
 	return (time.minutes - 8*60) / 30
