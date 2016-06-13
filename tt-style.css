@@ -96,6 +96,7 @@ float: left;
 }
 
 .cont-td{
+  border-collapse: collapse;
   margin: 0px;
   padding: 0px;
   border: 0px;
