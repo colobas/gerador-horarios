@@ -121,6 +121,7 @@ float: left;
 }
 
 td{
+  padding = 0px; !important
   overflow: hidden;
   display: table-cell;
   white-space: nowrap; !important
