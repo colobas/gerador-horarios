@@ -33,7 +33,7 @@ class HTMLPrettyPrinter:
 			super_slots = []
 			while len(day_slots) != 0:
 				slot = day_slots.pop(0)
-				if len(super_slots != 0):
+				if len(super_slots) != 0:
 					a = False
 					for super_slot in super_slots:
 						if super_slot[-1].end.minutes == slot.start.minutes:
@@ -84,10 +84,10 @@ class HTMLPrettyPrinter:
 
 
 	def format_group(self, grupo, content):
-		day = grupo[0].day
+		day = grupo[0][0].day
 		if len(grupo) == 1: #se as aulas nao se sobrepuserem, faz como antigamente
 			slot = grupo[0]
-			self.format_simple_case(slot, content, slot[0].day)
+			self.format_simple_case(slot, content, slot[0].day, 0)
 		else:
 			earliest_start = int(min([time_index(slot[0].start) for slot in grupo]))
 			latest_end = int(max([time_index(slot[-1].end) for slot in grupo]))
@@ -100,9 +100,7 @@ class HTMLPrettyPrinter:
 			day_i = -1
 			for slot in grupo:
 				day_i = day_i+1
-				start_i = int(time_index(slot[0].start) - earliest_start)
-				end_i = int(time_index(slot[-1].end) - earliest_start)
-				self.format_simple_case(slot, micro_table, day_i)
+				self.format_simple_case(slot, micro_table, day_i, earliest_start)
 
 			for row in xrange(0, height):
 				s = [col[row] for col in micro_table]
@@ -115,10 +113,10 @@ class HTMLPrettyPrinter:
 				content[day][row+earliest_start] ="<td class='cont-td'><table class='inner-table'>" + "\n".join(s) + "</table></td>"
 
 
-	def format_simple_case(self, ss, content, day_i):
+	def format_simple_case(self, ss, content, day_i, earliest_start):
 		for slot in ss:
-			start_i = int(time_index(slot.start))
-			end_i = int(time_index(slot.end))
+			start_i = int(time_index(slot.start) - earliest_start)
+			end_i = int(time_index(slot.end) - earliest_start)
 			content[day_i][start_i] = "<td class='period-first-slot' "
 			content[day_i][end_i-1] = "<td class='period-last-slot' "
 			for time_i in xrange(start_i+1, end_i-1):
