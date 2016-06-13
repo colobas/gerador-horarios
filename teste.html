@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+		<html>
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+			<meta name='viewport' content='width=device-width, initial-scale=1'>
+			<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+			<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js'></script>
+			<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+			<script type="text/javascript">
+				  var courseCount = 0;
+				  
+			      function showErrorMessage() { document.getElementById("errorMessage").style.visibility = "visible" }
+			      function hideErrorMessage() { document.getElementById("errorMessage").style.visibility = "hidden" }
+			      
+				  function processCourseURL() {
+			     
+			        
+				    var xmlhttp = new XMLHttpRequest();
+			        xmlhttp.onreadystatechange = function() {
+					  if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+			            if (xmlhttp.responseText == '')
+			              showErrorMessage();
+			            else {
+			              hideErrorMessage();
+			              document.getElementById("courseURL").value = "";
+					      document.getElementById("courses").innerHTML += xmlhttp.responseText;
+			            }
+					  }
+					}
+					
+					courseCount++;
+					var encodedURL = encodeURIComponent(document.getElementById("courseURL").value.split("#")[1]);
+					xmlhttp.open("POST", "process_course_url.php", true);
+					xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+					xmlhttp.send("course_id="+courseCount + "&url="+encodedURL);
+				  }
+			      
+			      function removeCourse(course) { course.innerHTML = "" }
+			</script>
+			<style>
+				.cadeira{
+					display: inline-block !important;
+				    max-width: 100px  !important;
+				    text-overflow: ellipsis !important;
+				    overflow: hidden !important;
+
+				}
+				.container{
+				    margin: auto;
+				    width: 60%;
+				    padding: 10px;
+				}
+				#footer {
+					  text-align: right;
+					  position: absolute;
+					  bottom: 0;
+					  width: 100%;
+					  height: 20px;
+					  background-color: #f5f5f5;
+				}
+				td {
+					text-align: center;
+					padding: 4px;
+				}
+			</style>
+		</head>
+		<body>
+ 									<div id='errorMessage' style="font-family:'Verdana';color:#DD0000;visibility:hidden">Ocorreu um erro na obtenção da disciplina. É possível que o URL esteja mal formado.</div>
+						<div class='container'>
+				          <table style="width:70%;">
+				          	<tbody>
+				      					<tr>
+			<td>
+				<h3>Escolher&nbspuma&nbspcadeira</h3>
+			</td>
+			<td>
+	      		<select class="form-control" id="courseURL">
+<option class="cadeira">Álgebra Linear - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #http://fenix.tecnico.ulisboa.pt/disciplinas/AL201113/2015-2016/2-semestre</option>
+<option class="cadeira">Álgebra Linear - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #http://fenix.tecnico.ulisboa.pt/disciplinas/AL201113/2015-2016/2-semestre</option>			</select>
+			</td>
+			<td>
+				<button type="button" onclick="processCourseURL()"><span class="glyphicon glyphicon-plus"></span></button>
+			</td>
+		</tr>
+
+				           		<tr><td></td><td><form action="generate_timetables.php" method="post">
+				           		<div id="courses">
+				      			</div>
+				           		</form></td><td></td></tr>
+				           		<tr><td></td><td><input type="submit" value="Submit"></td><td></td></tr>
+				           </tbody>
+				      	  </table>
+				      	 </div>
+					    	<div id="footer">
+            Créditos: Pedro P. Ramos (<a href="http://web.ist.utl.pt/pedropramos/horarios/">Original version</a>)
+        </div>
+   </body>
+   </html>
