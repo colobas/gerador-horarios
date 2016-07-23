@@ -19,8 +19,6 @@ for arg_encoded in sys.argv[1:]:
 generator = TimetableGenerator()
 generator.generate_timetables(lesson_blocks)
 
-generator.generated.sort(key=Timetable.total_time)
-
 if generator.generated:
 	printer = HTMLPrettyPrinter()
 	printer.print_timetables(generator.generated, generator.total_combinations)

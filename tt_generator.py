@@ -46,10 +46,10 @@ class TimetableGenerator:
 
 		self.generated = best[:100]
 
-		cnt = 0
-		for tt in self.generated:
-			print(" self.generated[{0}].score = {1}".format(cnt, tt.score))
-			cnt += 1
+	#	cnt = 0
+	#	for tt in self.generated:
+	#		print(" self.generated[{0}].score = {1}".format(cnt, tt.score))
+	#		cnt += 1
 
 	def generate(self, timetable, lesson_blocks):
 		if not lesson_blocks:
