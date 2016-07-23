@@ -31,6 +31,8 @@ class TimetableGenerator:
 
 		best = list(set(self.generated).intersection(set(self.generated2)))
 
+		print("best len = {0}\n gen1 len = {1}\n gen2 len = {2}\n".format(len(best), len(self.generated), len(self.generated2)))
+
 		for tt in best:
 			tt.score += len(self.generated) - self.generated.index(tt)
 			tt.score += len(self.generated2) - self.generated2.index(tt)
