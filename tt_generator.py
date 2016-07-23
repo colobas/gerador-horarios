@@ -39,11 +39,6 @@ class TimetableGenerator:
 
 		best.sort(key=lambda tt: tt.score, reverse=True)
 
-	#	cnt = 0
-	#	for tt in self.generated:
-	#		print(" self.generated[{0}].score = {1}".format(cnt, tt.score))
-	#		cnt += 1
-
 		return best[:100]
 
 	def generate(self, timetable, lesson_blocks):
