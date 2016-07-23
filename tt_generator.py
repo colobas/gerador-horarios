@@ -82,6 +82,7 @@ class Timetable:
 				earliest_start = min([slot.start.minutes for slot in daily_lessons])
 				latest_end = max([slot.end.minutes for slot in daily_lessons])
 				interval = latest_end - earliest_start
+				result += intervalo
 		return result
 
 	def total_time(self):
