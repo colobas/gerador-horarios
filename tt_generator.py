@@ -9,7 +9,7 @@ class TimetableGenerator:
 		self.total_combinations += 1
 		tt.heuristic = tt.total_time()
 		tt.heuristic2 = tt.total_time2()
-		print("total_time = {0}, total_time2 = {1}".(tt.heuristic, tt.heuristic2))
+		print("total_time = {0}, total_time2 = {1}".format(tt.heuristic, tt.heuristic2))
 
 		if len(self.generated) <= 99:
 			self.generated.append(tt)
