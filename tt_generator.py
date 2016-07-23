@@ -28,10 +28,10 @@ class TimetableGenerator:
 
 	def generate_timetables(self, lesson_blocks):
 		self.generate(Timetable(), lesson_blocks)
+		self.generated.sort(key=lambda tt: tt.heuristic)
+		self.generated2.sort(key=lambda tt: tt.heuristic2)
 
 		best = list(set(self.generated).intersection(set(self.generated2)))
-
-		print("best len = {0}\n gen1 len = {1}\n gen2 len = {2}\n".format(len(best), len(self.generated), len(self.generated2)))
 
 		for tt in best:
 			tt.score += len(self.generated) - self.generated.index(tt)
