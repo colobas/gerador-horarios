@@ -17,11 +17,11 @@ for arg_encoded in sys.argv[1:]:
 		lesson_blocks.append(current_course.get_block_by_category(arg))
 
 generator = TimetableGenerator()
-generator.generate_timetables(lesson_blocks)
+best = generator.generate_timetables(lesson_blocks)
 
 if generator.generated:
 	printer = HTMLPrettyPrinter()
-	printer.print_timetables(generator.generated, generator.total_combinations)
+	printer.print_timetables(best, generator.total_combinations)
 else:
 	printer = HTMLErrorPrinter()
 	print printer.no_timetables()

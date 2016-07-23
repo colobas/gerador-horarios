@@ -29,27 +29,20 @@ class TimetableGenerator:
 	def generate_timetables(self, lesson_blocks):
 		self.generate(Timetable(), lesson_blocks)
 
-		best = []
-		for tt in self.generated:
-			best.append(tt)
-		for tt in self.generated2:
-			if not tt in best:
-				best.append(tt)
+		best = list(set(self.generated).intersection(set(self.generated2)))
 
-		for i in xrange(1, len(self.generated)+1):
-			self.generated[len(self.generated) - i].score += i
-
-		for i in xrange(1, len(self.generated2)+1):
-			self.generated2[len(self.generated2) - i].score += i
+		for tt in best:
+			tt.score += len(self.generated) - self.generated.index(tt)
+			tt.score += len(self.generated2) - self.generated2.index(tt)
 
 		best.sort(key=lambda tt: tt.score, reverse=True)
-
-		self.generated = best[:100]
 
 	#	cnt = 0
 	#	for tt in self.generated:
 	#		print(" self.generated[{0}].score = {1}".format(cnt, tt.score))
 	#		cnt += 1
+
+		return best[:100]
 
 	def generate(self, timetable, lesson_blocks):
 		if not lesson_blocks:
