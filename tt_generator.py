@@ -98,7 +98,7 @@ class Timetable:
 					daily_lessons.sort(key=lambda x: x.start.minutes)
 					prev = daily_lessons[0].end.minutes
 					for slot in daily_lessons[1:]:
-						if slot.start.minutes > prev:
+						if slot.start.minutes >= prev:
 							result = result + (slot.start.minutes - prev)
 						else:
 							result = result + 1000
