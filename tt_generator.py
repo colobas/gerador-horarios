@@ -37,7 +37,7 @@ class TimetableGenerator:
 				best.append(tt)
 
 		for i in xrange(1, len(self.generated)+1):
-			self.generated[len(self.generated) - i].score += i
+			self.generated[len(self.generated) - i].score += 0
 
 		for i in xrange(1, len(self.generated2)+1):
 			self.generated2[len(self.generated2) - i].score += i
