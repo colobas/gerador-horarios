@@ -9,7 +9,6 @@ class TimetableGenerator:
 		self.total_combinations += 1
 		tt.heuristic = tt.total_time()
 		tt.heuristic2 = tt.total_time2()
-		print("total_time = {0}, total_time2 = {1}".format(tt.heuristic, tt.heuristic2))
 
 		if len(self.generated) <= 99:
 			self.generated.append(tt)
@@ -38,15 +37,19 @@ class TimetableGenerator:
 				best.append(tt)
 
 		for i in xrange(1, len(self.generated)+1):
-			self.generated[len(self.generated) - i].score += 0
+			self.generated[len(self.generated) - i].score += i
 
 		for i in xrange(1, len(self.generated2)+1):
-			self.generated2[len(self.generated2) - i].score += 0
+			self.generated2[len(self.generated2) - i].score += i
 
 		best.sort(key=lambda tt: tt.score)
 
 		self.generated = best[:100]
 
+		cnt = 0
+		for tt in self.generated:
+			print(" self.generated[{0}].score = {1}".format(cnt, tt.score))
+			cnt += 1
 
 	def generate(self, timetable, lesson_blocks):
 		if not lesson_blocks:
