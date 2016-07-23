@@ -101,7 +101,7 @@ class Timetable:
 						if slot.start.minutes > prev:
 							result = result + (slot.start.minutes - prev)
 						else:
-							result = result + 120
+							result = result + 1000
 
 						prev = slot.end.minutes
 
