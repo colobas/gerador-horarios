@@ -42,7 +42,7 @@ class TimetableGenerator:
 		for i in xrange(1, len(self.generated2)+1):
 			self.generated2[len(self.generated2) - i].score += i
 
-		best.sort(key=lambda tt: tt.score)
+		best.sort(key=lambda tt: tt.score, reverse=True)
 
 		self.generated = best[:100]
 
